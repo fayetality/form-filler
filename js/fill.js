@@ -1,6 +1,8 @@
 //alert('Example:' + config.osf_title);
 //alert('Example:' + config.osf_description);
 
+
+//Content script which writes the information passed to it to the DOM
 $('textarea[name="title"]').val(config.osf_title);
 
 for (i = 0; i < config.osf_config.results.length; i++){

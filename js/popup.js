@@ -1,5 +1,6 @@
 var global_response;
 
+// Sends a request at the url passed to grab the callback response. This response will contain data of an OSF Project
 function fetch_json() {
     //https://osf.io/hxeza/wiki
     chrome.extension.sendRequest({
@@ -13,6 +14,7 @@ function fetch_json() {
     );
 }
 
+// Sends a request at the url passed to grab the callback response. This response will contain data of the files of the respective OSF Project
 function fetch_files_json() {
     //https://osf.io/hxeza/wiki
     chrome.extension.sendRequest({
@@ -25,6 +27,7 @@ function fetch_files_json() {
     );
 }
 
+// Sends a request at the url passed to grab the callback response. This response will contain data of one of the individual files
 function fetch_proposal_text(url) {
     chrome.extension.sendRequest({
         'action' : 'fetch_proposal_text', 
@@ -36,6 +39,7 @@ function fetch_proposal_text(url) {
     );
 }
 
+//Generates the dropdown menu of names in the popup
 function create_dropdown(response){
     var apiJSON = $.parseJSON(response);
     var name_item = '';
@@ -52,6 +56,7 @@ function create_dropdown(response){
     populate_name_version(selected_name);
 }
 
+//Fills the dropdown menu of the contributors who worked on the same OSF project
 function populate_name_version(name){
     var item = '';
     $('#osf_result').html('');
@@ -77,6 +82,7 @@ function populate_name_version(name){
     $("#osf_result").append(item);
 }
 
+//Prepends all file URL with "https://osf.io" so that the links associated with the file have a place to go
 function prependURL(hgridJSON){
     var result = null;
     if(hgridJSON instanceof Array) {
@@ -110,6 +116,7 @@ function prependURL(hgridJSON){
     return result;
 }
 
+//Creates the Hgrid containing all the files
 function create_hgrid(response){
     var filesJSON = $.parseJSON(response);
     var fullURLJson = prependURL(filesJSON);
@@ -127,6 +134,7 @@ function create_hgrid(response){
         });
 }
 
+//Currently, this logs the corrected file URL
 function parse_full_text(response){
     //var textHTML = $.parseHTML(response);
     /*text_html = $(response).find("#fileRendered")[0].innerHTML;
@@ -138,6 +146,7 @@ function parse_full_text(response){
     console.log(response);
 }
 
+//Passes the information from the poppup to the content script for it to load into the page
 function fill_json(){
     var apiJSON = $.parseJSON(global_response);
     var config = {
@@ -156,6 +165,7 @@ function fill_json(){
         });
 }
 
+//Call respective functions on document ready
 $(document).ready(function() {
     fetch_json();
     fetch_files_json();

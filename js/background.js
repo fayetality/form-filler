@@ -1,3 +1,4 @@
+//Calls for a response from the url that is passed in so that the callback can return the data back to the popup to use
 function fetch_json(url, callback) {
   var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(data) {
@@ -15,10 +16,12 @@ function fetch_json(url, callback) {
     xhr.send();
 } 
 
+//If the request action matches any of the below, it will call the fetch_json function to grab a response
 function onRequest(request, sender, callback) {
     if (request.action == 'fetch_json' || request.action == 'fetch_files_json' || request.action == 'fetch_proposal_text') {
         fetch_json(request.url, callback);
     }
 }
 
+//Sets up a listener to wait for a request from the popup
 chrome.extension.onRequest.addListener(onRequest);
