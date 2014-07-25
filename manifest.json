@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "OSF Form Filler",
+  "version": "0.1",
+  "description": "OSF Form Filler",
+  "browser_action":{
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": ["tabs", "activeTab", "http://*/", "https://*/"],
+  "background":{
+    "page": "background.html"
+  }
+}
