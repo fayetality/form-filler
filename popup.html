@@ -13,7 +13,19 @@
 	</head>
 	
 	<body>
-		<a href="http://www.silkstream.net/blog/wp-content/uploads/2014/01/duckduckgo-logo.png">DRAG MEEE</a>
+		<div id="osf_project_dropdown">
+			Select project:
+			<br>
+			<select id="osf_project">
+				<option value = "empty"></option>
+				<option value = "wx7ck">Investigating Variation in Replicability: A "Many Labs" Replication Project</option>
+				<option value = "r6idy">Forming Impressions of Personality: A Replication and Review of Asch's (1946) Evidence for a Primacy-of-Warmth Effect in Impression Formation</option>
+				<option value = "s92i4">Revisiting Schachter's Research on Rejection, Deviance, and Communication</option>
+				<option value = "6wxgf">Revisiting Romeo and Juliet</option>
+				<option value = "ietwv">Breakthrough or one-hit wonder? Three attempts to replicate single-exposure musical conditioning effects on choice behavior (Gorn, 1982).</option>
+			</select>
+		</div>
+		<br>
 		<div id="osf_name_dropdown">
 			Select contributor:
 			<br>
@@ -32,17 +44,10 @@
 			</select>
 		</div>
 
-		<br>
-
-		<button id="fill_form" type="button">Fill Form</button>
-
-		<br>
-		
-		<div id="filetreeProgressBar" class="progress progress-striped active" style="display: none;">
-	    	<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-		        <span class="sr-only">Loading</span>
-			</div>
+		<div>
+			<button id="fill_form" type="button">Fill Form</button>
 		</div>
+		
 		<input role="search" class="form-control" placeholder="Search files..." type="text" id="fileSearch" autofocus="">
 		<div id="myGrid"></div>
 	</body>

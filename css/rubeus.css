@@ -7,6 +7,13 @@
     border: 0px !important;
 }
 
+.l1, .r1 {
+    height: 100% !important;
+    border: 0px !important;
+    text-align: center;
+    padding: 2px;
+}
+
 .hg-btn {
     margin-right: 6px;
 }
@@ -37,7 +44,7 @@
   border-color: #285e8e;
 }
 
-.btn-delete {
+/*.btn-delete {
   color: #999999;
   visibility: hidden;
 }
@@ -48,7 +55,7 @@
 
 .btn-delete:hover {
     text-decoration: none;
-}
+}*/
 
 .hg-extras{
     text-decoration: none !important;
@@ -105,6 +112,6 @@
   color: white;
 }
 
-.btn-delete:hover {
+/*.btn-delete:hover {
   color: #b94a48;
-}
+}*/

@@ -22,7 +22,7 @@
 
     Rubeus.Html = $.extend({}, HGrid.Html);
     // Custom folder icon indicating private component
-    Rubeus.Html.folderIconPrivate = '<img class="hg-icon hg-addon-icon" src="/static/img/hgrid/fatcowicons/folder_delete.png">';
+/*    Rubeus.Html.folderIconPrivate = '<img class="hg-icon hg-addon-icon" src="/static/img/hgrid/fatcowicons/folder_delete.png">';*/
     // Folder icon for pointers/links
     Rubeus.Html.folderIconPointer = '<i class="icon-hand-right"></i>';
     // Class for folder name
@@ -97,13 +97,13 @@
                 cssClass: 'btn btn-primary btn-mini'
             });
         }
-        if (item.permissions.edit) {
+        /*if (item.permissions.edit) {
             buttonDefs.push({
                 text: '&nbsp;<i class="icon-remove"title="" data-placement="right" data-toggle="tooltip" data-original-title="Delete"></i>',
                 action: 'delete',
                 cssClass: 'btn btn-link btn-mini btn-delete'
             });
-        }
+        }*/
     }
     if (item.buttons) {
         item.buttons.forEach(function(button) {
@@ -347,7 +347,7 @@
         deleteUrl: function(row) {
             return row.urls.delete;
         },
-        onClickDelete: function(evt, row) {
+        /*onClickDelete: function(evt, row) {
             var self = this;
             var $elem = $(evt.target);
             bootbox.confirm({
@@ -360,7 +360,7 @@
                 }
             });
             return this;
-        },
+        },*/
         canUpload: function(folder) {
             return folder.permissions.edit;
         },
