@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="bower_components/hgrid/dist/hgrid.css" type="text/css" />
+		<link rel="stylesheet" href="css/rubeus.css" type="text/css" />
+		<link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="bower_components/hgrid/dist/hgrid.js"></script>
+		<script src="js/rubeus.js"></script>
+		<script src="js/popup.js"></script>
+		
+	</head>
+	
+	<body>
+		<div id="osf_project_dropdown">
+			Select project:
+			<br>
+			<select id="osf_project">
+				<option value = "empty"></option>
+				<option value = "wx7ck">Investigating Variation in Replicability: A "Many Labs" Replication Project</option>
+				<option value = "r6idy">Forming Impressions of Personality: A Replication and Review of Asch's (1946) Evidence for a Primacy-of-Warmth Effect in Impression Formation</option>
+				<option value = "s92i4">Revisiting Schachter's Research on Rejection, Deviance, and Communication</option>
+				<option value = "6wxgf">Revisiting Romeo and Juliet</option>
+				<option value = "ietwv">Breakthrough or one-hit wonder? Three attempts to replicate single-exposure musical conditioning effects on choice behavior (Gorn, 1982).</option>
+			</select>
+		</div>
+		<br>
+		<div id="osf_name_dropdown">
+			Select contributor:
+			<br>
+			<select id="osf_select">
+
+			</select>
+		</div>
+
+		<br>
+
+		<div id="osf_name_version_dropdown">
+			Select name version:
+			<br>
+			<select id="osf_result">
+
+			</select>
+		</div>
+
+		<div>
+			<button id="fill_form" type="button">Fill Form</button>
+		</div>
+		
+		<input role="search" class="form-control" placeholder="Search files..." type="text" id="fileSearch" autofocus="">
+		<div id="myGrid"></div>
+	</body>
+</html>
