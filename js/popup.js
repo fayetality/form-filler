@@ -46,8 +46,8 @@ function create_user_dropdown(response){
     var name_item = '';
 
     for (i = 0; i < apiJSON.results[0].contributors.length; i++){
-        name_item += '<option value="'+apiJSON.results[0].contributors_url[i]+'">';
-        name_item += apiJSON.results[0].contributors[i];
+        name_item += '<option value="'+apiJSON.results[0].contributors[i].url+'">';
+        name_item += apiJSON.results[0].contributors[i].fullname;
         name_item += '</option>';
     }
 
